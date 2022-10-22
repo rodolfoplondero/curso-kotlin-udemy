@@ -1,4 +1,4 @@
 
-*.kotlin_module
 .idea
-*/production/*
+*.kotlin_module
+**/production
