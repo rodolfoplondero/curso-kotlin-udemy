@@ -14,6 +14,7 @@
         android:layout_marginTop="16dp"
         android:hint="@string/distance"
         android:inputType="numberDecimal"
+        android:minHeight="48dp"
         tools:ignore="Autofill" />
 
     <TextView
@@ -29,7 +30,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:hint="@string/price"
-        android:inputType="numberDecimal" />
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:autofillHints="" />
 
     <TextView
         android:layout_width="match_parent"
@@ -44,7 +47,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:hint="@string/autonomy"
-        android:inputType="numberDecimal" />
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:autofillHints="" />
 
     <TextView
         android:layout_width="match_parent"
@@ -78,7 +83,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:backgroundTint="@color/teal_200"
+        android:backgroundTint="@color/teal_700"
         android:padding="24dp"
         android:text="@string/calculate"
         android:textSize="20sp" />
