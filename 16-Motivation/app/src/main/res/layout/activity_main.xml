@@ -20,19 +20,21 @@
         >
 
         <ImageView
+            android:id="@+id/image_ic_all_inclusive"
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:layout_weight="1"
-            android:src="@drawable/ic_all_inclusive"
-            app:tint="@color/white" />
+            android:src="@drawable/ic_all_inclusive"/>
 
         <ImageView
+            android:id="@+id/image_ic_happy"
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:layout_weight="1"
             android:src="@drawable/ic_happy" />
 
         <ImageView
+            android:id="@+id/image_ic_sunny"
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:layout_weight="1"
