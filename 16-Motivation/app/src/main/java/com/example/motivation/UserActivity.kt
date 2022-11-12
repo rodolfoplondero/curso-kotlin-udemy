@@ -25,12 +25,17 @@ class UserActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(v: View) {
         if (v.id == R.id.button_save) {
             handleSave()
+
         }
     }
 
     private fun handleSave() {
         val name = binding.editName.text.toString()
         if (name != "") {
+
+            // Salva o nome no SharedPreferences
+            SecurityPreferences(this).storeString("USER_NAME", name)
+
             // Inicia nova activity
             startActivity(Intent(this, MainActivity::class.java))
 
