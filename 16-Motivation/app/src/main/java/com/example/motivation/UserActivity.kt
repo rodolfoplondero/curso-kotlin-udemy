@@ -1,8 +1,10 @@
 package com.example.motivation
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.example.motivation.databinding.ActivityUserBinding
 
 class UserActivity : AppCompatActivity(), View.OnClickListener {
@@ -21,8 +23,25 @@ class UserActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(v: View) {
-        if(v.id == R.id.button_save){
-            println("Save")
+        if (v.id == R.id.button_save) {
+            handleSave()
+        }
+    }
+
+    private fun handleSave() {
+        val name = binding.editName.text.toString()
+        if (name != "") {
+            // Inicia nova activity
+            startActivity(Intent(this, MainActivity::class.java))
+
+            // Finaliza a activity atual
+            finish()
+        } else {
+            Toast.makeText(
+                this,
+                R.string.validation_mandatory_name,
+                Toast.LENGTH_SHORT
+            ).show()
         }
     }
 }
