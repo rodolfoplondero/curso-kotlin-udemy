@@ -37,7 +37,7 @@ class AllGuestsFragment : Fragment() {
         // Adapter
         binding.recycleGuests.adapter = adapter
 
-        val listener = object: OnGuestListener{
+        val listener = object : OnGuestListener {
             override fun onClick(id: Int) {
                 val intent = Intent(context, GuestFormActivity::class.java)
 
@@ -79,9 +79,7 @@ class AllGuestsFragment : Fragment() {
         }
 
         viewModel.deletedGuest.observe(viewLifecycleOwner) {
-            if (it.success){
-                Toast.makeText(context, it.message, Toast.LENGTH_SHORT).show()
-            }
+            Toast.makeText(context, it, Toast.LENGTH_SHORT).show()
         }
     }
 }
